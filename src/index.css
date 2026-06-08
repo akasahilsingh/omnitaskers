@@ -162,6 +162,9 @@ button { cursor: pointer; font-family: inherit; }
 .section-py { padding-top: 6rem; padding-bottom: 6rem; }
 @media (max-width: 768px) { .section-py { padding-top: 4rem; padding-bottom: 4rem; } }
 
+/* Hide expensive animated blur orbs on mobile — they cause GPU lag */
+@media (max-width: 1023px) { .hero-orb { display: none !important; } }
+
 .container-inner {
   width: 100%;
   max-width: 1200px;
@@ -335,4 +338,45 @@ button { cursor: pointer; font-family: inherit; }
 .whatsapp-fab:hover {
   transform: scale(1.12);
   box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+}
+
+/* ─── Mobile Performance Optimizations ─── */
+@media (max-width: 768px) {
+  /* Disable expensive backdrop-filter on low-power mobile GPUs */
+  .glass, .glass-dark {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Reduce card hover transforms on touch devices (no hover anyway) */
+  .card:hover,
+  .card-border:hover {
+    transform: none;
+  }
+
+  /* Simplify floating animation on mobile */
+  .animate-float,
+  .animate-float-delay {
+    animation-duration: 6s;
+  }
+
+  /* Padding tightening for small screens */
+  .section-py { padding-top: 3rem; padding-bottom: 3rem; }
+  .container-inner { padding: 0 1rem; }
+}
+
+/* ─── Reduce motion for accessibility + battery ─── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-delay,
+  .animate-pulse-glow,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* ─── Section containment (perf) ─── */
+section {
+  contain: layout style;
 }

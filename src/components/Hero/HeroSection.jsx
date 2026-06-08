@@ -34,6 +34,7 @@ export function HeroSection() {
     >
       {/* Animated orbs */}
       <motion.div
+        className="hero-orb"
         animate={{ scale: [1, 1.2, 1], opacity: [0.18, 0.30, 0.18] }}
         transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
         style={{
@@ -45,6 +46,7 @@ export function HeroSection() {
         }}
       />
       <motion.div
+        className="hero-orb"
         animate={{ scale: [1, 1.15, 1], opacity: [0.12, 0.22, 0.12] }}
         transition={{ duration: 12, repeat: Infinity, delay: 3, ease: 'easeInOut' }}
         style={{
@@ -335,6 +337,8 @@ export function HeroSection() {
         }
         @media (max-width: 1023px) {
           .hero-card-col { display: none !important; }
+          /* Hide expensive blur orbs on tablet/mobile */
+          .hero-orb { display: none !important; }
         }
         @media (max-width: 480px) {
           .highlights-grid { grid-template-columns: 1fr !important; }

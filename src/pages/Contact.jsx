@@ -10,6 +10,7 @@ function PageHero({ title, subtitle, badge }) {
       position: 'relative', overflow: 'hidden',
     }}>
       <motion.div
+        className="hero-orb"
         animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.28, 0.15] }}
         transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
         style={{

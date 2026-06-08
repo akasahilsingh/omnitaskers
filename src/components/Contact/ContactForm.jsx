@@ -174,7 +174,8 @@ export function ContactForm() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '1rem', position: 'sticky', top: '100px' }}
+            className="contact-sidebar"
+            style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
           >
             {contactCards.map((card) => (
               <motion.div
@@ -378,8 +379,15 @@ export function ContactForm() {
       </div>
 
       <style>{`
+        @media (min-width: 901px) {
+          .contact-sidebar {
+            position: sticky;
+            top: 96px;
+          }
+        }
         @media (max-width: 900px) {
           .contact-grid { grid-template-columns: 1fr !important; }
+          .contact-sidebar { position: static !important; }
         }
         @media (max-width: 640px) {
           .form-two-col { grid-template-columns: 1fr !important; }

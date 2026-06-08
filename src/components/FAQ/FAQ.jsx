@@ -83,7 +83,7 @@ export function FAQ() {
   const [openId, setOpenId] = useState(1)
 
   return (
-    <section style={{ background: 'white', padding: '6rem 0' }}>
+    <section style={{ background: 'white', padding: '6rem 0', overflow: 'hidden', isolation: 'isolate' }}>
       <div className="container-inner">
         <SectionTitle
           badge="FAQ"
