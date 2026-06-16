@@ -309,7 +309,7 @@ export const COMPANY_INFO = {
   tagline: 'Premium Home & Property Services in Lucknow',
   description: 'OmniTaskers is the premium, trusted service platform dedicated to the residents of Omaxe City, Lucknow. We connect homeowners and property managers with verified, expert professionals to deliver reliable, top-tier home maintenance, cleaning, personal assistance, and vehicle care services under one organized platform.',
   mission: 'To simplify home and property maintenance by providing Lucknow residential communities with trusted, seamless, and high-quality services at upfront, fair pricing.',
-  vision: 'To become the benchmark for professional residential property management and household assistance services across Lucknow.',
+  vision: 'At Omnitaskers Solutions Pvt. Ltd., our vision is to empower every deserving and educated individual with access to meaningful employment opportunities that unlock their full potential. We aspire to build a future where talent is recognized, opportunities are accessible, and every individual has an equal chance to grow, succeed, and contribute to the nation\'s social, economic, and educational progress. Through workforce empowerment and inclusive growth, we are committed to creating a stronger, more equitable, and prosperous society.',
   values: [
     { title: 'Trust', description: 'Every single professional is vetted so you can feel completely secure.' },
     { title: 'Quality', description: 'We hold ourselves to rigorous standards and inspect work to guarantee satisfaction.' },
