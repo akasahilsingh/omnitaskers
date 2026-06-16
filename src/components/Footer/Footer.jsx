@@ -78,15 +78,16 @@ function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
-              <div style={{
-                width: '42px', height: '42px',
-                background: 'linear-gradient(135deg, #0D9488, #14B8A6)',
-                borderRadius: '12px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                boxShadow: '0 4px 16px rgba(13,148,136,0.35)',
-              }}>
-                <span style={{ color: 'white', fontWeight: 900, fontSize: '16px', fontFamily: 'Outfit, sans-serif' }}>OT</span>
-              </div>
+              <img
+                src="/omnitaskers-logo.svg"
+                alt="OmniTaskers Logo"
+                style={{
+                  width: '44px', height: '44px',
+                  objectFit: 'contain',
+                  filter: 'brightness(0) invert(1) drop-shadow(0 2px 6px rgba(13,148,136,0.4))',
+                  flexShrink: 0,
+                }}
+              />
               <span style={{
                 fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                 fontSize: '20px', color: 'white', letterSpacing: '-0.02em',

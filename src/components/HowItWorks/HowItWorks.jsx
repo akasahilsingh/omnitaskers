@@ -19,20 +19,24 @@ export function HowItWorks() {
           style={{ marginBottom: '4rem' }}
         />
 
-        <div style={{
+        <div className="how-it-works-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '1.5rem',
           marginTop: '3.5rem',
           position: 'relative',
         }}>
-          {/* Connector line for desktop */}
+          {/* Connector line for desktop — runs through circle centers */}
           <div className="how-connector" style={{
-            position: 'absolute', top: '56px', left: '15%', right: '15%',
+            position: 'absolute',
+            top: '36px',
+            left: 'calc(12.5% + 0px)',
+            right: 'calc(12.5% + 0px)',
             height: '2px',
             background: 'linear-gradient(90deg, #0B3D6E, #0D9488, #0B3D6E)',
-            opacity: 0.20,
+            opacity: 0.22,
             zIndex: 0,
+            transform: 'translateY(0)',
           }} />
 
           {HOW_IT_WORKS.map((item, i) => (
@@ -111,6 +115,11 @@ export function HowItWorks() {
       <style>{`
         @media (max-width: 767px) {
           .how-connector { display: none !important; }
+          .how-it-works-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .how-connector { display: none !important; }
+          .how-it-works-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
     </section>

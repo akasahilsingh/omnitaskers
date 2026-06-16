@@ -49,16 +49,17 @@ export function Navbar() {
 
             {/* Logo */}
             <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-              <div style={{
-                width: '42px', height: '42px',
-                background: 'linear-gradient(135deg, #0B3D6E 0%, #0D9488 100%)',
-                borderRadius: '12px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                boxShadow: '0 4px 16px rgba(13,148,136,0.30)',
-                flexShrink: 0,
-              }}>
-                <span style={{ color: 'white', fontWeight: 900, fontSize: '16px', fontFamily: 'Outfit, sans-serif' }}>OT</span>
-              </div>
+              <img
+                src="/omnitaskers-logo.svg"
+                alt="OmniTaskers Logo"
+                style={{
+                  width: '44px',
+                  height: '44px',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 2px 8px rgba(13,148,136,0.25))',
+                  flexShrink: 0,
+                }}
+              />
               <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '20px', color: '#0B3D6E', letterSpacing: '-0.02em' }}>
                 Omni<span style={{ color: '#0D9488' }}>Taskers</span>
               </span>

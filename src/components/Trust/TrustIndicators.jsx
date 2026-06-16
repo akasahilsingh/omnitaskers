@@ -46,7 +46,6 @@ function AnimatedCounter({ value, suffix, prefix }) {
 
 const metrics = [
   { id: 1, value: 50, suffix: '+', prefix: '', label: 'Verified Professionals', icon: '👨‍🔧' },
-  { id: 2, value: 1200, suffix: '+', prefix: '', label: 'Omaxe Homes Served', icon: '🏠' },
   { id: 3, value: 98, suffix: '%', prefix: '', label: 'Satisfaction Rate', icon: '⭐' },
   { id: 4, value: 45, suffix: ' Min', prefix: '', label: 'Avg Response Time', icon: '⚡' },
 ]
@@ -108,6 +107,25 @@ export function TrustIndicators() {
             </motion.div>
           ))}
         </div>
+
+        {/* Services attribution */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          style={{
+            textAlign: 'center',
+            marginTop: '2rem',
+            fontSize: '0.78rem',
+            fontWeight: 600,
+            color: 'rgba(186,230,253,0.50)',
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+          }}
+        >
+          ✦ All services provided by OmniTaskers Solutions Pvt. Ltd. ✦
+        </motion.p>
       </div>
     </section>
   )

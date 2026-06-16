@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="ringLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B3D6E"/>
+      <stop offset="100%" stop-color="#0F5A9E"/>
+    </linearGradient>
+    <linearGradient id="ringRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0B3D6E"/>
+    </linearGradient>
+    <linearGradient id="goldCenter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A227"/>
+      <stop offset="50%" stop-color="#F0D060"/>
+      <stop offset="100%" stop-color="#A07818"/>
+    </linearGradient>
+    <clipPath id="leftRingClip">
+      <circle cx="78" cy="90" r="52"/>
+    </clipPath>
+    <clipPath id="rightRingClip">
+      <circle cx="122" cy="90" r="52"/>
+    </clipPath>
+  </defs>
+
+  <!-- Left ring (O) -->
+  <circle cx="78" cy="90" r="52" fill="none" stroke="url(#ringLeft)" stroke-width="14"/>
+
+  <!-- Right ring (T shape merged) -->
+  <circle cx="122" cy="90" r="52" fill="none" stroke="url(#ringRight)" stroke-width="14"/>
+
+  <!-- Center gold accent — T vertical bar -->
+  <rect x="96" y="62" width="8" height="56" rx="4" fill="url(#goldCenter)"/>
+  <!-- Center gold accent — T horizontal bar -->
+  <rect x="82" y="62" width="36" height="8" rx="4" fill="url(#goldCenter)"/>
+
+  <!-- Small gold arc at overlap to mimic the logo detail -->
+  <path d="M 100 68 Q 112 78 100 90 Q 88 78 100 68 Z" fill="url(#goldCenter)" opacity="0.5"/>
+</svg>

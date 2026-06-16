@@ -23,7 +23,7 @@ const iconBg = [
 
 export function ServiceCategories() {
   return (
-    <section id="services" style={{ background: '#F8FAFC', padding: '6rem 0' }}>
+    <section id="services" style={{ background: '#F8FAFC', padding: '6rem 0', position: 'relative', zIndex: 0, isolation: 'isolate', overflow: 'hidden' }}>
       <div className="container-inner">
         <SectionTitle
           badge="What We Offer"
