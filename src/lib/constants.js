@@ -51,8 +51,8 @@ export const ANIMATION = {
 };
 
 export const CONTACT = {
-  phone: '+91-9876543210',
-  whatsapp: '919876543210', // Raw number for wa.me URL
+  phone: '+91-9140959566',
+  whatsapp: '919140959566', // Raw number for wa.me URL
   email: 'hello@omnitaskers.in',
   address: 'Omaxe City, Lucknow, Uttar Pradesh, 226025',
 };

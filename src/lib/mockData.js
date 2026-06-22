@@ -5,9 +5,9 @@ export const SERVICES = [
     description: 'Premium deep cleaning and sanitization for homes & offices',
     icon: 'Sparkles',
     services: [
-      { name: '1. Deep Cleaning', description: 'Thorough sanitation of all rooms, kitchens, and bathrooms' },
-      { name: '2. Move-In Cleaning', description: 'Detailed cleaning before you unpack and settle in' },
-      { name: '3. Move-Out Cleaning', description: 'Restoration-level cleaning to prepare properties for handover' },
+      { name: 'Deep Cleaning', description: 'Thorough sanitation of all rooms, kitchens, and bathrooms' },
+      { name: 'Move-In Cleaning', description: 'Detailed cleaning before you unpack and settle in' },
+      { name: 'Move-Out Cleaning', description: 'Restoration-level cleaning to prepare properties for handover' },
     ],
   },
   {
@@ -16,12 +16,12 @@ export const SERVICES = [
     description: 'Expert plumbing, electrical, carpentry, painting & AC maintenance',
     icon: 'Wrench',
     services: [
-      { name: '1. Plumbing', description: 'Leak detection, pipe repairs, and premium fixture installations' },
-      { name: '2. Electrical', description: 'Safe repairs, complete rewiring, and appliance installations' },
-      { name: '3. Carpentry', description: 'Furniture repair, cabinet assembly, and custom wood fittings' },
-      { name: '4. Painting', description: 'Professional interior and exterior painting with premium finishes' },
-      { name: '5. AC Maintenance', description: 'AC installation, filter cleaning, and cooling optimization' },
-      { name: '6. Tank Cleaning', description: 'Hygienic overhead and underground water tank disinfection' },
+      { name: 'Plumbing', description: 'Leak detection, pipe repairs, and premium fixture installations' },
+      { name: 'Electrical', description: 'Safe repairs, complete rewiring, and appliance installations' },
+      { name: 'Carpentry', description: 'Furniture repair, cabinet assembly, and custom wood fittings' },
+      { name: 'Painting', description: 'Professional interior and exterior painting with premium finishes' },
+      { name: 'AC Maintenance', description: 'AC installation, filter cleaning, and cooling optimization' },
+      { name: 'Tank Cleaning', description: 'Hygienic overhead and underground water tank disinfection' },
     ],
   },
   {
@@ -30,10 +30,10 @@ export const SERVICES = [
     description: 'Trusted daily help, from maid services to cooking and caretaker assistance',
     icon: 'Users',
     services: [
-      { name: '1. Maid Services', description: 'Reliable housekeeping, sweeping, dusting, and washing support' },
-      { name: '2. Cook Services', description: 'Experienced cooks preparing wholesome home-cooked meals' },
-      { name: '3. Caretaker Services', description: 'Attentive care for elderly family members or property upkeep' },
-      { name: '4. Nanny Services', description: 'Professional child care and babysitting support' },
+      { name: 'Maid Services', description: 'Reliable housekeeping, sweeping, dusting, and washing support' },
+      { name: 'Cook Services', description: 'Experienced cooks preparing wholesome home-cooked meals' },
+      { name: 'Caretaker Services', description: 'Attentive care for elderly family members or property upkeep' },
+      { name: 'Nanny Services', description: 'Professional child care and babysitting support' },
     ],
   },
   {
@@ -42,9 +42,9 @@ export const SERVICES = [
     description: 'Professional car washing, detailing, and roadside mechanical support',
     icon: 'Car',
     services: [
-      { name: '1. Car Cleaning', description: 'Thorough interior vacuuming and exterior washing at your doorstep' },
-      { name: '2. Vehicle Detailing', description: 'Paint protection, polishing, and deep restoration services' },
-      { name: '3. Mechanical Assistance', description: 'Basic battery jump-starts, tire change, and minor repairs' },
+      { name: 'Car Cleaning', description: 'Thorough interior vacuuming and exterior washing at your doorstep' },
+      { name: 'Vehicle Detailing', description: 'Paint protection, polishing, and deep restoration services' },
+      { name: 'Mechanical Assistance', description: 'Basic battery jump-starts, tire change, and minor repairs' },
     ],
   },
   {
@@ -53,9 +53,9 @@ export const SERVICES = [
     description: 'Landscaping, site infrastructure, and expert project oversight',
     icon: 'Building2',
     services: [
-      { name: '1. Landscaping', description: 'Garden design, lawn mowing, and comprehensive plant care' },
-      { name: '2. Site Infrastructure', description: 'Paving, drainage solutions, and outdoor fencing installation' },
-      { name: '3. Project Oversight', description: 'Professional supervision for home construction or renovation' },
+      { name: 'Landscaping', description: 'Garden design, lawn mowing, and comprehensive plant care' },
+      { name: 'Site Infrastructure', description: 'Paving, drainage solutions, and outdoor fencing installation' },
+      { name: 'Project Oversight', description: 'Professional supervision for home construction or renovation' },
     ],
   },
 ];
