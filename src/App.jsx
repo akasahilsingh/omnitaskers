@@ -6,12 +6,15 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Industries from './pages/Industries'
+import Approach from './pages/Approach'
+import Careers from './pages/Careers'
 import { MessageCircle } from 'lucide-react'
 import { CONTACT } from './lib/constants'
 
 function App() {
   const handleWhatsApp = () => {
-    const msg = "Hi OmniTaskers! I need assistance with a home service in Omaxe City."
+    const msg = "Hi Omnitaskers! I'd like to discuss workforce and operational solutions for my business."
     window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
@@ -26,6 +29,9 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/approach" element={<Approach />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </main>
         <Footer />

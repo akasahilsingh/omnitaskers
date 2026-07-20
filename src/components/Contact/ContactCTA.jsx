@@ -4,7 +4,7 @@ import { CONTACT } from '../../lib/constants'
 
 export function ContactCTA() {
   const handleWhatsApp = () => {
-    const msg = "Hi OmniTaskers! I need direct assistance with a household service in Omaxe City."
+    const msg = "Hi Omnitaskers! I'd like to discuss workforce and operational solutions for my business."
     window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
@@ -63,7 +63,7 @@ export function ContactCTA() {
             letterSpacing: '0.08em', textTransform: 'uppercase',
             marginBottom: '1.5rem',
           }}>
-            <Clock size={12} /> 9 AM – 9 PM Daily · Fast Response
+            <Clock size={12} /> 24×7 Operational Support
           </span>
 
           <h2 style={{
@@ -72,13 +72,13 @@ export function ContactCTA() {
             color: 'white', lineHeight: 1.15, letterSpacing: '-0.03em',
             marginBottom: '1rem',
           }}>
-            Need Help Today?
+            Need Operational Support?
           </h2>
           <p style={{
             fontSize: '1.05rem', color: 'rgba(186, 230, 253, 0.80)',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px', margin: '0 auto 2.5rem',
           }}>
-            Get in touch with our Omaxe City team for direct bookings, service inquiries, or customized quote requests.
+            Get in touch with our team for workforce solutions, logistics support, or facility management services.
           </p>
 
           {/* CTA Buttons */}
@@ -143,7 +143,7 @@ export function ContactCTA() {
               onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.10)'}
             >
               <Mail size={19} />
-              Get Free Quote
+              Submit Your Requirement
             </motion.a>
           </div>
 

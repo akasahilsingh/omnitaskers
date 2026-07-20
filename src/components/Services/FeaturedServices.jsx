@@ -1,30 +1,30 @@
 import { motion } from 'framer-motion'
-import { Star, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import SectionTitle from '../Common/SectionTitle'
 import { FEATURED_SERVICES } from '../../lib/mockData'
 
 const emojiColors = {
-  '✨': 'rgba(245,158,11,0.10)',
-  '🚰': 'rgba(59,130,246,0.10)',
-  '❄️': 'rgba(14,165,233,0.10)',
-  '🚗': 'rgba(100,116,139,0.10)',
-  '🎨': 'rgba(168,85,247,0.10)',
-  '⚡': 'rgba(251,191,36,0.10)',
+  '🏭': 'rgba(13,148,136,0.10)',
+  '🚛': 'rgba(11,61,110,0.10)',
+  '🏢': 'rgba(124,58,237,0.10)',
+  '🔧': 'rgba(234,88,12,0.10)',
+  '👥': 'rgba(22,163,74,0.10)',
+  '📦': 'rgba(59,130,246,0.10)',
 }
 
 export function FeaturedServices() {
   const handleClick = (category) => {
-    const mapped = category.toLowerCase().replace(/\s+/g, '-')
-    window.location.href = `/contact?service=${mapped}`
+    const mapped = category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')
+    window.location.href = `/services?category=${mapped}`
   }
 
   return (
     <section style={{ background: 'white', padding: '6rem 0' }}>
       <div className="container-inner">
         <SectionTitle
-          badge="Popular Services"
+          badge="Key Solutions"
           title="Featured Services"
-          subtitle="Our most popular residential services, executed to perfection by trained professionals"
+          subtitle="Our most sought-after operational and workforce solutions across industries"
           style={{ marginBottom: '4rem' }}
         />
 
@@ -57,7 +57,6 @@ export function FeaturedServices() {
               {/* Image area */}
               <div style={{
                 height: '160px',
-                background: emojiColors[service.image] || 'rgba(241,245,249,1)',
                 background: `linear-gradient(135deg, ${emojiColors[service.image] ? emojiColors[service.image].replace('0.10', '0.15') : 'rgba(248,250,252,1)'} 0%, rgba(241,245,249,1) 100%)`,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '4rem',
@@ -92,40 +91,15 @@ export function FeaturedServices() {
                   {service.description}
                 </p>
 
-                {/* Stars */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '1rem' }}>
-                  <div style={{ display: 'flex', gap: '2px' }}>
-                    {[...Array(5)].map((_, idx) => (
-                      <Star
-                        key={idx}
-                        size={13}
-                        style={{
-                          color: idx < Math.floor(service.rating) ? '#F59E0B' : '#E2E8F0',
-                          fill: idx < Math.floor(service.rating) ? '#F59E0B' : 'none',
-                        }}
-                      />
-                    ))}
-                  </div>
-                  <span style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 600 }}>
-                    {service.rating} ({service.reviews} reviews)
-                  </span>
-                </div>
-
                 {/* Footer */}
                 <div style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   paddingTop: '1rem',
                   borderTop: '1px solid rgba(0,0,0,0.06)',
                 }}>
-                  <div>
-                    <p style={{ fontSize: '0.7rem', color: '#94A3B8', fontWeight: 500 }}>Starting from</p>
-                    <p style={{
-                      fontFamily: 'Outfit, sans-serif', fontWeight: 800,
-                      fontSize: '1.15rem', color: '#0B3D6E',
-                    }}>
-                      {service.price.replace('From ', '')}
-                    </p>
-                  </div>
+                  <span style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 600 }}>
+                    Professional Service
+                  </span>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
@@ -142,7 +116,7 @@ export function FeaturedServices() {
                       cursor: 'pointer',
                     }}
                   >
-                    Get Quote
+                    Learn More
                     <ArrowRight size={14} />
                   </motion.button>
                 </div>

@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, MessageCircle, Phone, Sparkles, Wrench, Users, Car, Building2, HelpCircle, CheckCircle, ArrowUpRight } from 'lucide-react'
+import { ArrowRight, MessageCircle, Phone, Warehouse, Truck, Users, Building2, HelpCircle, CheckCircle, ArrowUpRight } from 'lucide-react'
 import { SERVICES } from '../lib/mockData'
 import { CONTACT } from '../lib/constants'
 
-const iconMap = { Sparkles, Wrench, Users, Car, Building2 }
+const iconMap = { Warehouse, Truck, Users, Building2 }
 
 const categoryColors = [
   { bg: 'rgba(13,148,136,0.10)', active: '#0D9488', light: 'rgba(13,148,136,0.08)' },
   { bg: 'rgba(11,61,110,0.10)', active: '#0B3D6E', light: 'rgba(11,61,110,0.06)' },
   { bg: 'rgba(234,88,12,0.09)', active: '#EA580C', light: 'rgba(234,88,12,0.07)' },
   { bg: 'rgba(124,58,237,0.09)', active: '#7C3AED', light: 'rgba(124,58,237,0.07)' },
-  { bg: 'rgba(16,163,74,0.09)', active: '#16A34A', light: 'rgba(16,163,74,0.07)' },
 ]
 
 // Reusable page hero used across all inner pages
@@ -83,20 +82,20 @@ function PageHero({ title, subtitle, badge }) {
 
 export default function Services() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const activeCategory = searchParams.get('category') || 'cleaning-services'
+  const activeCategory = searchParams.get('category') || 'warehouse-operations'
   const currentCategory = SERVICES.find(c => c.id === activeCategory) || SERVICES[0]
 
   const handleWhatsApp = (name) => {
-    const msg = `Hi OmniTaskers! I am interested in booking or getting a quote for the "${name}" service in Omaxe City, Lucknow.`
+    const msg = `Hi Omnitaskers! I am interested in learning more about your "${name}" services for my business.`
     window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <PageHero
-        badge="All Services"
-        title="Our Premium Services"
-        subtitle="Explore our range of home, maintenance, and vehicle care services tailored specifically for Omaxe City, Lucknow."
+        badge="Our Core Business"
+        title="Our Services"
+        subtitle="Comprehensive workforce and operational solutions for warehouse, logistics, facility management and manpower needs."
       />
 
       {/* Category selector — floats up from wave */}
@@ -195,6 +194,11 @@ export default function Services() {
                 <p style={{ fontSize: '0.9rem', color: '#64748B', lineHeight: 1.7, maxWidth: '520px' }}>
                   {currentCategory.description}
                 </p>
+                {currentCategory.tagline && (
+                  <p style={{ fontSize: '0.82rem', color: '#0D9488', fontWeight: 600, marginTop: '0.75rem', fontStyle: 'italic' }}>
+                    {currentCategory.tagline}
+                  </p>
+                )}
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', flexShrink: 0 }}>
                 <motion.button
@@ -211,7 +215,7 @@ export default function Services() {
                     cursor: 'pointer',
                   }}
                 >
-                  Request Quote
+                  Inquire Now
                   <ArrowRight size={15} />
                 </motion.button>
                 <motion.button
@@ -279,7 +283,7 @@ export default function Services() {
                     marginTop: '1.25rem', paddingTop: '1rem',
                     borderTop: '1px solid rgba(0,0,0,0.06)',
                   }}>
-                    <span style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600 }}>Premium Care</span>
+                    <span style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600 }}>Professional Service</span>
                     <button
                       onClick={() => handleWhatsApp(`${currentCategory.name} — ${sub.name}`)}
                       style={{
@@ -309,10 +313,10 @@ export default function Services() {
                   fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                   fontSize: '1.2rem', color: 'white', marginBottom: '0.4rem',
                 }}>
-                  Have a custom service request?
+                  Have a custom requirement?
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'rgba(186,230,253,0.75)', lineHeight: 1.6 }}>
-                  If you need services not listed here, our Omaxe City team will try to accommodate you.
+                  We offer customized operational solutions tailored to your specific business needs.
                 </p>
               </div>
               <a

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import SectionTitle from '../Common/SectionTitle'
 import { HOW_IT_WORKS } from '../../lib/mockData'
 
-const stepColors = ['#0B3D6E', '#0D9488', '#0B3D6E', '#0D9488']
+const stepColors = ['#0B3D6E', '#0D9488', '#7C3AED', '#EA580C', '#16A34A', '#D97706']
 
 export function HowItWorks() {
   return (
@@ -15,13 +15,13 @@ export function HowItWorks() {
         <SectionTitle
           badge="Simple Process"
           title="How It Works"
-          subtitle="A simple, transparent process to get your home tasks handled by local experts"
+          subtitle="A structured and transparent B2B process delivering reliable, efficient and result-oriented solutions"
           style={{ marginBottom: '4rem' }}
         />
 
         <div className="how-it-works-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1.5rem',
           marginTop: '3.5rem',
           position: 'relative',

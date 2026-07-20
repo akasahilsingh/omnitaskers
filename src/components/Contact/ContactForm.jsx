@@ -77,7 +77,16 @@ function FormInput({ label, required, ...props }) {
 
 export function ContactForm() {
   const [searchParams] = useSearchParams()
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' })
+  const [formData, setFormData] = useState({
+    name: '',
+    companyName: '',
+    phone: '',
+    email: '',
+    location: '',
+    service: '',
+    manpowerRequired: '',
+    message: '',
+  })
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
@@ -94,13 +103,22 @@ export function ContactForm() {
     e.preventDefault()
     setSubmitted(true)
     setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+      setFormData({
+        name: '',
+        companyName: '',
+        phone: '',
+        email: '',
+        location: '',
+        service: '',
+        manpowerRequired: '',
+        message: '',
+      })
       setSubmitted(false)
     }, 5000)
   }
 
   const handleWhatsApp = () => {
-    const msg = 'Hi OmniTaskers! I want to inquire about a service in Omaxe City, Lucknow.'
+    const msg = 'Hi Omnitaskers! I want to inquire about workforce and operational solutions for my business.'
     window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
@@ -117,7 +135,7 @@ export function ContactForm() {
       icon: MessageCircle,
       iconBg: 'linear-gradient(135deg, #25D366, #20B858)',
       label: 'WhatsApp Chat',
-      value: 'Chat with Coordinator',
+      value: 'Chat with Our Team',
       onClick: handleWhatsApp,
       isButton: true,
     },
@@ -132,7 +150,7 @@ export function ContactForm() {
     {
       icon: MapPin,
       iconBg: 'linear-gradient(135deg, #7C3AED, #9333EA)',
-      label: 'Service Area',
+      label: 'Office Location',
       value: CONTACT.address,
       href: null, isButton: false,
     },
@@ -149,17 +167,17 @@ export function ContactForm() {
             fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em',
             textTransform: 'uppercase', marginBottom: '1rem',
           }}>
-            Free Consultation
+            Contact Us
           </span>
           <h2 style={{
             fontFamily: 'Outfit, sans-serif', fontWeight: 800,
             fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: '#0B3D6E',
             letterSpacing: '-0.025em', marginBottom: '0.75rem',
           }}>
-            Request a Free Quote
+            Submit Your Requirement
           </h2>
           <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.7 }}>
-            Tell us about your home care needs and we'll get back with a transparent, custom estimate.
+            Tell us about your operational needs and we'll get back with a customized solution.
           </p>
         </div>
 
@@ -277,7 +295,7 @@ export function ContactForm() {
                   background: '#16A34A', animation: 'pulse-glow 2s infinite', flexShrink: 0,
                 }} />
                 <span style={{ fontSize: '0.75rem', color: '#0D9488', fontWeight: 700 }}>
-                  Emergency Services: 24/7
+                  24×7 Operational Support Available
                 </span>
               </div>
             </div>
@@ -302,39 +320,47 @@ export function ContactForm() {
                 fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                 fontSize: '1.4rem', color: '#0B3D6E', marginBottom: '0.25rem',
               }}>
-                Service Request Details
+                Service Requirement Details
               </h3>
               <p style={{ fontSize: '0.85rem', color: '#94A3B8', marginBottom: '2rem' }}>
-                Fill in your details and we'll get back to you within 2 hours.
+                Fill in your details and we'll get back to you with a customized solution.
               </p>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }} className="form-two-col">
-                <FormInput label="Full Name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="Your full name" required />
-                <FormInput label="Email Address" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="yourname@email.com" required />
+                <FormInput label="Name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="Your full name" required />
+                <FormInput label="Company Name" name="companyName" type="text" value={formData.companyName} onChange={handleChange} placeholder="Your company name" />
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }} className="form-two-col">
                 <FormInput label="Phone Number" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+91 98765 43210" required />
-                <FormInput label="Service Category" name="service" as="select" value={formData.service} onChange={handleChange}>
-                  <option value="">Select category</option>
-                  <option value="cleaning-services">Cleaning Services</option>
-                  <option value="property-maintenance">Property Maintenance</option>
-                  <option value="home-assistance">Home Assistance</option>
-                  <option value="vehicle-care">Vehicle Care</option>
-                  <option value="infrastructure-services">Infrastructure Services</option>
-                  <option value="other">Other / Custom Inquiry</option>
+                <FormInput label="Email Address" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="yourname@company.com" required />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }} className="form-two-col">
+                <FormInput label="Location" name="location" type="text" value={formData.location} onChange={handleChange} placeholder="City / State" />
+                <FormInput label="Service Required" name="service" as="select" value={formData.service} onChange={handleChange}>
+                  <option value="">Select service</option>
+                  <option value="warehouse-operations">Warehouse Operations</option>
+                  <option value="logistics-supply-chain">Logistics & Supply Chain</option>
+                  <option value="facility-management">Facility Management</option>
+                  <option value="manpower-solutions">Manpower Solutions</option>
+                  <option value="other">Other / Custom Requirement</option>
                 </FormInput>
+              </div>
+
+              <div style={{ marginBottom: '1.25rem' }}>
+                <FormInput label="Number of Manpower Required" name="manpowerRequired" type="text" value={formData.manpowerRequired} onChange={handleChange} placeholder="e.g. 10, 50, 100+" />
               </div>
 
               <div style={{ marginBottom: '1.75rem' }}>
                 <FormInput
-                  label="Describe Your Requirements"
+                  label="Message"
                   name="message"
                   as="textarea"
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Describe your maintenance or service need (e.g. leaking sink, AC installation, deep villa cleaning…)"
+                  placeholder="Describe your operational requirements, project timeline, and any specific needs..."
                 />
               </div>
 
@@ -363,10 +389,10 @@ export function ContactForm() {
                 {submitted ? (
                   <>
                     <CheckCircle size={18} />
-                    Quote Request Sent! We'll contact you shortly.
+                    Requirement Submitted! We'll contact you shortly.
                   </>
                 ) : (
-                  'Submit Request →'
+                  'Submit Your Requirement →'
                 )}
               </motion.button>
 

@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import SectionTitle from '../Common/SectionTitle'
-import { TRUST_METRICS } from '../../lib/mockData'
 
 function AnimatedCounter({ value, suffix, prefix }) {
   const [count, setCount] = useState(0)
@@ -45,9 +43,10 @@ function AnimatedCounter({ value, suffix, prefix }) {
 }
 
 const metrics = [
-  { id: 1, value: 50, suffix: '+', prefix: '', label: 'Verified Professionals', icon: '👨‍🔧' },
-  { id: 3, value: 98, suffix: '%', prefix: '', label: 'Satisfaction Rate', icon: '⭐' },
-  { id: 4, value: 45, suffix: ' Min', prefix: '', label: 'Avg Response Time', icon: '⚡' },
+  { id: 1, value: 100, suffix: '%', prefix: '', label: 'Service Quality Commitment', icon: '🏆', isAnimated: true },
+  { id: 2, text: '24×7', label: 'Operational Support', icon: '⚡', isAnimated: false },
+  { id: 3, text: 'Multi', label: 'Industry Capability', icon: '🏢', isAnimated: false },
+  { id: 4, text: 'Scalable', label: 'Workforce Solutions', icon: '📈', isAnimated: false },
 ]
 
 export function TrustIndicators() {
@@ -96,7 +95,17 @@ export function TrustIndicators() {
               whileHover={{ background: 'rgba(255,255,255,0.11)' }}
             >
               <span style={{ fontSize: '2.2rem', marginBottom: '0.25rem' }}>{metric.icon}</span>
-              <TRUST_METRICS_COUNTER metric={metric} />
+              {metric.isAnimated ? (
+                <AnimatedCounter value={metric.value} suffix={metric.suffix} prefix={metric.prefix} />
+              ) : (
+                <span style={{
+                  fontFamily: 'Outfit, sans-serif',
+                  fontWeight: 900, fontSize: 'clamp(2.25rem, 4vw, 3rem)',
+                  color: 'white', lineHeight: 1, letterSpacing: '-0.03em',
+                }}>
+                  {metric.text}
+                </span>
+              )}
               <p style={{
                 fontSize: '0.82rem', fontWeight: 600,
                 color: 'rgba(186, 230, 253, 0.75)',
@@ -124,15 +133,11 @@ export function TrustIndicators() {
             textTransform: 'uppercase',
           }}
         >
-          ✦ All services provided by OmniTaskers Solutions Pvt. Ltd. ✦
+          ✦ Omnitaskers Solution Private Limited ✦
         </motion.p>
       </div>
     </section>
   )
-}
-
-function TRUST_METRICS_COUNTER({ metric }) {
-  return <AnimatedCounter value={metric.value} suffix={metric.suffix} prefix={metric.prefix} />
 }
 
 export default TrustIndicators

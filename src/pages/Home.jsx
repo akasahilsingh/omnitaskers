@@ -4,6 +4,7 @@ import TrustIndicators from '../components/Trust/TrustIndicators'
 import ServiceCategories from '../components/Services/ServiceCategories'
 import WhyChooseCards from '../components/WhyChoose/WhyChooseCards'
 import HowItWorks from '../components/HowItWorks/HowItWorks'
+import IndustriesPreview from '../components/Industries/IndustriesPreview'
 import FeaturedServices from '../components/Services/FeaturedServices'
 import Testimonials from '../components/Testimonials/Testimonials'
 import FAQ from '../components/FAQ/FAQ'
@@ -25,6 +26,7 @@ function Home() {
       <ServiceCategories />
       <WhyChooseCards />
       <HowItWorks />
+      <IndustriesPreview />
       <FeaturedServices />
       <Testimonials />
       <div id="faq">

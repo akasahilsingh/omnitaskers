@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import { CONTACT, SOCIAL } from '../../lib/constants'
 
 const Facebook = ({ size = 18 }) => (
@@ -35,18 +35,19 @@ function Footer() {
       title: 'Company',
       links: [
         { label: 'About Us', href: '/about' },
-        { label: 'Services', href: '/services' },
+        { label: 'Our Approach', href: '/approach' },
+        { label: 'Industries', href: '/industries' },
+        { label: 'Careers', href: '/careers' },
         { label: 'Contact Us', href: '/contact' },
       ]
     },
     {
       title: 'Services',
       links: [
-        { label: 'Cleaning Services', href: '/services?category=cleaning-services' },
-        { label: 'Property Maintenance', href: '/services?category=property-maintenance' },
-        { label: 'Home Assistance', href: '/services?category=home-assistance' },
-        { label: 'Vehicle Care', href: '/services?category=vehicle-care' },
-        { label: 'Infrastructure Oversight', href: '/services?category=infrastructure-services' },
+        { label: 'Warehouse Operations', href: '/services?category=warehouse-operations' },
+        { label: 'Logistics & Supply Chain', href: '/services?category=logistics-supply-chain' },
+        { label: 'Facility Management', href: '/services?category=facility-management' },
+        { label: 'Manpower Solutions', href: '/services?category=manpower-solutions' },
       ]
     },
     {
@@ -80,7 +81,7 @@ function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
               <img
                 src="/omnitaskers-logo.svg"
-                alt="OmniTaskers Logo"
+                alt="Omnitaskers Logo"
                 style={{
                   width: '44px', height: '44px',
                   objectFit: 'contain',
@@ -96,8 +97,8 @@ function Footer() {
               </span>
             </div>
 
-            <p style={{ fontSize: '0.85rem', color: 'rgba(186,230,253,0.65)', lineHeight: 1.75, maxWidth: '240px', marginBottom: '1.5rem' }}>
-              Your premium, trusted partner for home, maintenance, and vehicle care services serving Omaxe City, Lucknow.
+            <p style={{ fontSize: '0.85rem', color: 'rgba(186,230,253,0.65)', lineHeight: 1.75, maxWidth: '260px', marginBottom: '1.5rem' }}>
+              Integrated operations and workforce solutions company specializing in Warehouse Operations, Logistics Support, Manpower Solutions and Facility Management.
             </p>
 
             <div style={{ display: 'flex', gap: '10px' }}>
@@ -236,7 +237,7 @@ function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="container-inner" style={{ padding: '1.25rem 1.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
           <p style={{ fontSize: '0.78rem', color: 'rgba(186,230,253,0.35)', fontWeight: 500 }}>
-            © {currentYear} OmniTaskers Lucknow. All rights reserved.
+            © {currentYear} Omnitaskers Solution Private Limited. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {['Privacy Policy', 'Terms of Service'].map((label) => (

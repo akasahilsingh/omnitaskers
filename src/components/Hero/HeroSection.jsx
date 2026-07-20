@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, MessageCircle, Phone, Star, CheckCircle } from 'lucide-react'
+import { ArrowRight, MessageCircle, Phone, CheckCircle } from 'lucide-react'
 import { CONTACT } from '../../lib/constants'
 
 const fadeUp = (delay = 0) => ({
@@ -9,15 +9,15 @@ const fadeUp = (delay = 0) => ({
 })
 
 const highlights = [
-  'Background-Verified Professionals',
-  'Zero Travel Charges Within Omaxe City',
-  'Direct WhatsApp Coordination',
-  '100% Satisfaction Guarantee',
+  'Trained & Verified Workforce',
+  'Scalable Manpower Solutions',
+  '24×7 Operational Support',
+  'Multi-Industry Expertise',
 ]
 
 export function HeroSection() {
   const handleWhatsApp = () => {
-    const msg = "Hi OmniTaskers! I'd like a quote for services in Omaxe City, Lucknow."
+    const msg = "Hi Omnitaskers! I'd like to discuss workforce and operational solutions for my business."
     window.open(`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
@@ -89,7 +89,7 @@ export function HeroSection() {
                   background: '#14B8A6', animation: 'pulse-glow 2s infinite',
                   flexShrink: 0,
                 }} />
-                Lucknow's Premium Residential Service Platform
+                Integrated Operations & Workforce Solutions
               </span>
             </motion.div>
 
@@ -100,22 +100,34 @@ export function HeroSection() {
               lineHeight: 1.1, letterSpacing: '-0.03em',
               color: 'white', marginBottom: '1.25rem',
             }}>
-              Trusted Home &amp; Property{' '}
+              Reliable People.{' '}
               <span style={{
                 background: 'linear-gradient(90deg, #14B8A6, #0D9488)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}>
-                Services in Omaxe City
+                Efficient Operations.
               </span>
+              {' '}Better Business.
             </motion.h1>
 
             {/* Subtext */}
             <motion.p {...fadeUp(0.3)} style={{
               fontSize: '1.1rem', color: 'rgba(186, 230, 253, 0.85)',
-              lineHeight: 1.75, marginBottom: '2rem', maxWidth: '540px',
+              lineHeight: 1.75, marginBottom: '2rem', maxWidth: '560px',
             }}>
-              One trusted platform for premium cleaning, property maintenance, home assistance, vehicle care, and infrastructure oversight in Omaxe City, Lucknow.
+              Omnitaskers Solution Private Limited is an integrated operations and workforce solutions company specializing in Warehouse Operations, Logistics Support, Manpower Solutions and Facility Management Services.
+            </motion.p>
+
+            {/* Corporate Statement */}
+            <motion.p {...fadeUp(0.34)} style={{
+              fontSize: '0.95rem', color: 'rgba(94, 234, 212, 0.90)',
+              lineHeight: 1.65, marginBottom: '2rem', maxWidth: '560px',
+              fontStyle: 'italic', fontWeight: 600,
+              paddingLeft: '1rem',
+              borderLeft: '3px solid rgba(20,184,166,0.50)',
+            }}>
+              "We provide the workforce, operational support and facility solutions that keep businesses moving."
             </motion.p>
 
             {/* Highlights */}
@@ -139,7 +151,7 @@ export function HeroSection() {
                 className="btn btn-teal btn-lg"
                 style={{ gap: '8px' }}
               >
-                Get Free Quote
+                Get In Touch
                 <ArrowRight size={18} />
               </motion.a>
               <motion.button
@@ -164,10 +176,10 @@ export function HeroSection() {
               }}
             >
               {[
-                { value: '50+', label: 'Verified Taskers' },
-                { value: '1,200+', label: 'Homes Served' },
-                { value: '98%', label: 'Satisfaction Rate' },
-                { value: '45 Min', label: 'Avg Response' },
+                { value: '100%', label: 'Service Quality' },
+                { value: '24×7', label: 'Operational Support' },
+                { value: 'Multi', label: 'Industry Capability' },
+                { value: 'Scalable', label: 'Workforce Solutions' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p style={{
@@ -223,7 +235,7 @@ export function HeroSection() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: '28px',
                   }}>
-                    🏠
+                    🏭
                   </div>
                   <span style={{
                     background: 'rgba(13,148,136,0.10)', color: '#0F766E',
@@ -231,7 +243,7 @@ export function HeroSection() {
                     fontSize: '0.7rem', fontWeight: 700,
                     letterSpacing: '0.05em', textTransform: 'uppercase',
                   }}>
-                    Omaxe City, LKO
+                    B2B Solutions
                   </span>
                 </div>
 
@@ -239,19 +251,19 @@ export function HeroSection() {
                   fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                   fontSize: '1.4rem', color: '#0B3D6E', marginBottom: '0.5rem',
                 }}>
-                  Premium Household Care
+                  Integrated Business Solutions
                 </h3>
                 <p style={{ fontSize: '0.83rem', color: '#64748B', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                  A high-end service platform exclusively for premium residents. Vetted professionals, transparent rates.
+                  Your single, trusted platform for workforce, operational support, and facility solutions.
                 </p>
 
                 {/* Features list */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(0,0,0,0.07)' }}>
                   {[
-                    { text: 'Professional Vetted Workforce', color: '#0D9488' },
-                    { text: 'Zero Travel Charges in Omaxe City', color: '#0D9488' },
-                    { text: 'Direct WhatsApp Coordination', color: '#0D9488' },
-                    { text: 'Satisfaction Guaranteed on Every Task', color: '#0D9488' },
+                    { text: 'Warehouse & Logistics Operations', color: '#0D9488' },
+                    { text: 'Professional Facility Management', color: '#0D9488' },
+                    { text: 'Skilled Manpower Deployment', color: '#0D9488' },
+                    { text: 'Scalable & Cost-Effective Solutions', color: '#0D9488' },
                   ].map((f, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <div style={{
@@ -267,19 +279,14 @@ export function HeroSection() {
                   ))}
                 </div>
 
-                {/* Rating */}
+                {/* Tagline */}
                 <div style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   marginTop: '1.5rem', paddingTop: '1.25rem',
                   borderTop: '1px solid rgba(0,0,0,0.07)',
                 }}>
-                  <div style={{ display: 'flex', gap: '2px' }}>
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={14} style={{ color: '#F59E0B', fill: '#F59E0B' }} />
-                    ))}
-                  </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#64748B' }}>
-                    4.9 · Trusted by 1,200+ residents
+                  <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#64748B', fontStyle: 'italic' }}>
+                    "We connect the right people with the right processes."
                   </span>
                 </div>
               </motion.div>
@@ -296,7 +303,7 @@ export function HeroSection() {
                   border: '3px solid white',
                 }}
               >
-                <span style={{ fontSize: '22px' }}>✨</span>
+                <span style={{ fontSize: '22px' }}>⚡</span>
               </motion.div>
 
               {/* Floating badge - bottom left */}
@@ -314,8 +321,8 @@ export function HeroSection() {
               >
                 <span style={{ fontSize: '20px' }}>🛡️</span>
                 <div>
-                  <p style={{ color: 'white', fontSize: '0.7rem', fontWeight: 700, lineHeight: 1 }}>Verified</p>
-                  <p style={{ color: 'rgba(148,208,210,0.85)', fontSize: '0.63rem', lineHeight: 1, marginTop: '2px' }}>Background Checked</p>
+                  <p style={{ color: 'white', fontSize: '0.7rem', fontWeight: 700, lineHeight: 1 }}>Trusted</p>
+                  <p style={{ color: 'rgba(148,208,210,0.85)', fontSize: '0.63rem', lineHeight: 1, marginTop: '2px' }}>Operations Partner</p>
                 </div>
               </motion.div>
             </div>

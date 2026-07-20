@@ -88,7 +88,7 @@ export function FAQ() {
         <SectionTitle
           badge="FAQ"
           title="Frequently Asked Questions"
-          subtitle="Everything you need to know about our premium home and property services in Omaxe City"
+          subtitle="Everything you need to know about our integrated operations and workforce solutions"
           style={{ marginBottom: '4rem' }}
         />
 

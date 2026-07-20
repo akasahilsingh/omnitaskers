@@ -20,9 +20,9 @@ export function Testimonials() {
     }}>
       <div className="container-inner">
         <SectionTitle
-          badge="Customer Reviews"
-          title="What Our Customers Say"
-          subtitle="Verified reviews from families in Omaxe City who trust OmniTaskers with their homes"
+          badge="Client Testimonials"
+          title="What Our Clients Say"
+          subtitle="Trusted by businesses across industries for reliable workforce and operational solutions"
           style={{ marginBottom: '4rem' }}
         />
 

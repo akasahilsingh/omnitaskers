@@ -17,9 +17,9 @@ export function WhyChooseCards() {
     <section style={{ background: 'white', padding: '6rem 0' }}>
       <div className="container-inner">
         <SectionTitle
-          badge="Why OmniTaskers"
-          title="Why Choose Us"
-          subtitle="Engineered to provide a premium, hassle-free service experience tailored for Lucknow residents"
+          badge="Your Reliable Operations Partner"
+          title="Why Choose Omnitaskers?"
+          subtitle="Reliable, efficient and scalable operational solutions tailored to the evolving needs of modern businesses"
           style={{ marginBottom: '4rem' }}
         />
 

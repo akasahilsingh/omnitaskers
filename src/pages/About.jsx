@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, ShieldCheck, Star, Zap, Heart } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { COMPANY_INFO } from '../lib/mockData'
 
 function PageHero({ title, subtitle, badge }) {
@@ -63,20 +63,29 @@ function PageHero({ title, subtitle, badge }) {
   )
 }
 
-const valueIcons = { Trust: '🤝', Quality: '⭐', 'Local Care': '🏡', Integrity: '💎' }
+const valueIcons = {
+  Reliability: '🤝',
+  'People First': '👥',
+  'Operational Excellence': '⭐',
+  Integrity: '💎',
+  Responsibility: '🛡️',
+  'Continuous Improvement': '📈',
+}
 const valueColors = [
   { bg: 'rgba(13,148,136,0.09)', color: '#0D9488' },
   { bg: 'rgba(245,158,11,0.09)', color: '#D97706' },
   { bg: 'rgba(11,61,110,0.09)', color: '#0B3D6E' },
   { bg: 'rgba(124,58,237,0.09)', color: '#7C3AED' },
+  { bg: 'rgba(234,88,12,0.09)', color: '#EA580C' },
+  { bg: 'rgba(16,163,74,0.09)', color: '#16A34A' },
 ]
 
 function About() {
   return (
     <div style={{ background: 'white', minHeight: '100vh' }}>
       <PageHero
-        badge="Our Story"
-        title="About OmniTaskers"
+        badge="Company Profile"
+        title="About Omnitaskers"
         subtitle={COMPANY_INFO.tagline}
       />
 
@@ -112,11 +121,19 @@ function About() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
                   COMPANY_INFO.description,
-                  'Built specifically to solve the household care bottlenecks faced by Lucknow residents, OmniTaskers brings top-tier professionalism, transparency, and vetted expertise to every job.',
-                  "We believe premium residential communities deserve equal parts technical excellence and convenience. That's why our coordination model is completely hassle-free — from quote to completion.",
+                  COMPANY_INFO.detailedDescription,
+                  COMPANY_INFO.partnerStatement,
                 ].map((text, i) => (
                   <p key={i} style={{ fontSize: '0.92rem', color: '#64748B', lineHeight: 1.8 }}>{text}</p>
                 ))}
+                <p style={{
+                  fontSize: '1rem', color: '#0D9488',
+                  fontWeight: 700, fontStyle: 'italic',
+                  lineHeight: 1.7, marginTop: '0.5rem',
+                  fontFamily: 'Outfit, sans-serif',
+                }}>
+                  We connect people. We simplify operations. We create solutions.
+                </p>
               </div>
               <motion.a
                 whileHover={{ scale: 1.04, y: -2 }}
@@ -161,19 +178,19 @@ function About() {
                   transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                   style={{ fontSize: '6rem', textAlign: 'center', marginBottom: '1.5rem' }}
                 >
-                  🏢
+                  🏭
                 </motion.div>
                 <h3 style={{
                   fontFamily: 'Outfit, sans-serif', fontWeight: 800,
                   fontSize: '1.4rem', color: 'white', textAlign: 'center', marginBottom: '0.5rem',
                 }}>
-                  OmniTaskers
+                  Omnitaskers
                 </h3>
                 <p style={{
                   color: 'rgba(186,230,253,0.70)', textAlign: 'center',
                   fontSize: '0.85rem', lineHeight: 1.65,
                 }}>
-                  Omaxe City's #1 trusted home & property services platform
+                  Integrated Operations & Workforce Solutions Partner
                 </p>
 
                 {/* Stats row */}
@@ -183,10 +200,10 @@ function About() {
                   borderRadius: '16px', overflow: 'hidden', marginTop: '2rem',
                 }}>
                   {[
-                    { v: '50+', l: 'Verified Taskers' },
-                    { v: '1,200+', l: 'Homes Served' },
-                    { v: '98%', l: 'Satisfaction' },
-                    { v: '45 Min', l: 'Response Time' },
+                    { v: '100%', l: 'Service Quality' },
+                    { v: '24×7', l: 'Operational Support' },
+                    { v: 'Multi', l: 'Industry Capability' },
+                    { v: 'Scalable', l: 'Workforce Solutions' },
                   ].map(s => (
                     <div key={s.l} style={{
                       background: 'rgba(255,255,255,0.07)',
@@ -218,7 +235,7 @@ function About() {
                   border: '3px solid white',
                 }}
               >
-                <span style={{ fontSize: '22px' }}>✨</span>
+                <span style={{ fontSize: '22px' }}>⚡</span>
               </motion.div>
             </motion.div>
           </div>
@@ -309,7 +326,7 @@ function About() {
               Our Core Values
             </h2>
             <p style={{ fontSize: '1rem', color: '#64748B', marginTop: '0.75rem' }}>
-              The fundamental principles guiding our commitment to Omaxe City, Lucknow
+              The fundamental principles defining the way we work and the relationships we build
             </p>
           </div>
 
@@ -350,7 +367,7 @@ function About() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: '32px', margin: '0 auto 1.25rem',
                   }}>
-                    {valueIcons[value.title]}
+                    {valueIcons[value.title] || '✨'}
                   </div>
                   <h4 style={{
                     fontFamily: 'Outfit, sans-serif', fontWeight: 800,
@@ -385,10 +402,10 @@ function About() {
             borderRadius: '20px', overflow: 'hidden',
           }}>
             {[
-              { v: '50+', l: 'Verified Taskers' },
-              { v: '1,200+', l: 'Villas Serviced' },
-              { v: '5,000+', l: 'Services Completed' },
-              { v: '98%', l: 'Satisfaction Rate' },
+              { v: '100%', l: 'Service Quality Commitment' },
+              { v: '24×7', l: 'Operational Support' },
+              { v: 'Multi', l: 'Industry Service Capability' },
+              { v: 'Scalable', l: 'Workforce Solutions' },
             ].map((s, i) => (
               <motion.div
                 key={s.l}
@@ -434,10 +451,10 @@ function About() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.4rem)',
               color: '#0B3D6E', letterSpacing: '-0.025em', marginBottom: '1rem',
             }}>
-              Experience Premium Care Today
+              Let's Build Better Operations Together
             </h2>
             <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.75, marginBottom: '2rem' }}>
-              Find out why families in Omaxe City trust OmniTaskers with their property maintenance and cleaning tasks.
+              Discover how Omnitaskers can streamline your operations and provide reliable workforce solutions for your business.
             </p>
             <motion.a
               whileHover={{ scale: 1.04, y: -2 }}
@@ -453,7 +470,7 @@ function About() {
                 textDecoration: 'none',
               }}
             >
-              Get Free Quote <ArrowRight size={18} />
+              Contact Us <ArrowRight size={18} />
             </motion.a>
           </motion.div>
         </div>

@@ -28,7 +28,7 @@ export function ServiceCategories() {
         <SectionTitle
           badge="What We Offer"
           title="Explore Service Categories"
-          subtitle="Vetted, professional, and reliable services designed to keep your Omaxe City home in pristine condition"
+          subtitle="Comprehensive workforce and operational solutions for businesses across industries"
           className="mb-16"
           style={{ marginBottom: '4rem' }}
         />

@@ -6,9 +6,12 @@ import { CONTACT } from '../../lib/constants'
 
 const navLinks = [
   { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'Our Approach', href: '/approach' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Contact Us', href: '/contact' },
 ]
 
 export function Navbar() {
@@ -124,7 +127,7 @@ export function Navbar() {
                 {CONTACT.phone}
               </a>
               <Link to="/contact" className="btn btn-teal btn-sm">
-                Get Free Quote
+                Get In Touch
               </Link>
             </div>
 
@@ -198,7 +201,7 @@ export function Navbar() {
                 <Phone size={16} /> {CONTACT.phone}
               </a>
               <Link to="/contact" className="btn btn-teal" onClick={() => setIsOpen(false)} style={{ justifyContent: 'center' }}>
-                Get Free Quote
+                Get In Touch
               </Link>
             </div>
           </motion.div>
