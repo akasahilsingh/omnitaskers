@@ -189,7 +189,7 @@ export function HeroSection() {
                   }}>
                     {stat.value}
                   </p>
-                  <p style={{ fontSize: '0.76rem', color: 'rgba(148,208,210,0.75)', fontWeight: 500, marginTop: '3px' }}>
+                  <p style={{ fontSize: '0.76rem', color: 'rgba(148,208,210,0.95)', fontWeight: 500, marginTop: '3px' }}>
                     {stat.label}
                   </p>
                 </div>
@@ -322,7 +322,7 @@ export function HeroSection() {
                 <span style={{ fontSize: '20px' }}>🛡️</span>
                 <div>
                   <p style={{ color: 'white', fontSize: '0.7rem', fontWeight: 700, lineHeight: 1 }}>Trusted</p>
-                  <p style={{ color: 'rgba(148,208,210,0.85)', fontSize: '0.63rem', lineHeight: 1, marginTop: '2px' }}>Operations Partner</p>
+                  <p style={{ color: 'rgba(148,208,210,0.95)', fontSize: '0.63rem', lineHeight: 1, marginTop: '2px' }}>Operations Partner</p>
                 </div>
               </motion.div>
             </div>

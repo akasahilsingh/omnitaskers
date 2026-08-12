@@ -114,7 +114,7 @@ export function Testimonials() {
                   }}>
                     {testimonial.name}
                   </p>
-                  <p style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 500, marginTop: '2px' }}>
+                  <p style={{ fontSize: '0.75rem', color: '#6B7280', fontWeight: 500, marginTop: '2px' }}>
                     {testimonial.title}
                   </p>
                 </div>

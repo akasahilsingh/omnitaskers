@@ -146,7 +146,7 @@ export default function Services() {
                   }}>
                     {cat.name}
                   </p>
-                  <p style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600, marginTop: '3px' }}>
+                  <p style={{ fontSize: '0.72rem', color: '#6B7280', fontWeight: 600, marginTop: '3px' }}>
                     {cat.services.length} services
                   </p>
                 </div>
@@ -283,7 +283,7 @@ export default function Services() {
                     marginTop: '1.25rem', paddingTop: '1rem',
                     borderTop: '1px solid rgba(0,0,0,0.06)',
                   }}>
-                    <span style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600 }}>Professional Service</span>
+                    <span style={{ fontSize: '0.72rem', color: '#6B7280', fontWeight: 600 }}>Professional Service</span>
                     <button
                       onClick={() => handleWhatsApp(`${currentCategory.name} — ${sub.name}`)}
                       style={{

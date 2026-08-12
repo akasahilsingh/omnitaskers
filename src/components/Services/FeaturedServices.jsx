@@ -97,7 +97,7 @@ export function FeaturedServices() {
                   paddingTop: '1rem',
                   borderTop: '1px solid rgba(0,0,0,0.06)',
                 }}>
-                  <span style={{ fontSize: '0.75rem', color: '#94A3B8', fontWeight: 600 }}>
+                  <span style={{ fontSize: '0.75rem', color: '#6B7280', fontWeight: 600 }}>
                     Professional Service
                   </span>
                   <motion.button

@@ -218,7 +218,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p style={{
-                    fontSize: '0.72rem', color: '#94A3B8', fontWeight: 700,
+                    fontSize: '0.72rem', color: '#6B7280', fontWeight: 700,
                     letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '4px',
                   }}>
                     {card.label}
@@ -322,7 +322,7 @@ export function ContactForm() {
               }}>
                 Service Requirement Details
               </h3>
-              <p style={{ fontSize: '0.85rem', color: '#94A3B8', marginBottom: '2rem' }}>
+              <p style={{ fontSize: '0.85rem', color: '#6B7280', marginBottom: '2rem' }}>
                 Fill in your details and we'll get back to you with a customized solution.
               </p>
 
@@ -396,7 +396,7 @@ export function ContactForm() {
                 )}
               </motion.button>
 
-              <p style={{ fontSize: '0.75rem', color: '#94A3B8', textAlign: 'center', marginTop: '1rem' }}>
+              <p style={{ fontSize: '0.75rem', color: '#6B7280', textAlign: 'center', marginTop: '1rem' }}>
                 🔒 Your information is secure and will never be shared.
               </p>
             </form>

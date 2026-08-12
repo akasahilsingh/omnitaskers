@@ -19,17 +19,13 @@
 
   <!-- ── Twitter Card ── -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Omnitaskers Solution – Integrated Workforce & Operations">
+  <meta name="twitter:title" content="Omnitaskers Solution – Integrated Workforce &amp; Operations">
   <meta name="twitter:description" content="Reliable workforce and operations solutions: Warehouse, Logistics, Manpower, Facility Management.">
 
-  <!-- ── Security / Best Practices ── -->
-  <!-- X-Frame-Options: mitigate clickjacking (CSP frame-ancestors preferred when server sets headers) -->
+  <!-- ── Security meta tags (belt-and-suspenders — real headers set via vercel.json) ── -->
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <!-- Prevent MIME-type sniffing -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <!-- Referrer policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- Permissions Policy – restrict unused browser features -->
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
 
   <!-- ── Canonical ── -->
@@ -39,17 +35,11 @@
   <link rel="icon" type="image/svg+xml" href="/icon.svg">
   <link rel="apple-touch-icon" href="/apple-icon.png">
 
-  <!-- ── Font performance: preconnect first, then load ── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!--
-    display=swap ensures text stays visible during font load (fixes FCP).
-    Only load the weights actually used in the codebase.
+    Google Fonts REMOVED — fonts are now self-hosted via @fontsource npm packages
+    (imported in src/main.jsx). This eliminates the 840ms render-blocking
+    external CDN request and the 731ms font file critical path.
   -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
 
   <!-- ── Critical inline styles ── -->
   <style>

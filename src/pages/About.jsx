@@ -215,7 +215,7 @@ function About() {
                       }}>
                         {s.v}
                       </p>
-                      <p style={{ fontSize: '0.68rem', color: 'rgba(148,208,210,0.75)', fontWeight: 600 }}>
+                      <p style={{ fontSize: '0.68rem', color: 'rgba(148,208,210,0.95)', fontWeight: 600 }}>
                         {s.l}
                       </p>
                     </div>
@@ -426,7 +426,7 @@ function About() {
                   {s.v}
                 </p>
                 <p style={{
-                  fontSize: '0.76rem', color: 'rgba(148,208,210,0.75)',
+                  fontSize: '0.76rem', color: 'rgba(148,208,210,0.95)',
                   fontWeight: 600, marginTop: '8px', letterSpacing: '0.04em',
                   textTransform: 'uppercase',
                 }}>
