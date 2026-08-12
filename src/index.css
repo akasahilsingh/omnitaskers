@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+/* Google Fonts loaded in index.html with preconnect for better FCP */
 
 @tailwind base;
 @tailwind components;
@@ -379,4 +379,11 @@ button { cursor: pointer; font-family: inherit; }
 /* ─── Section containment (perf) ─── */
 section {
   contain: layout style;
+}
+
+/* ─── Content visibility: skip rendering of offscreen sections ─── */
+/* Apply to sections that are below the fold (not the first 2 visible sections) */
+section:not(:first-child):not(:nth-child(2)) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
 }

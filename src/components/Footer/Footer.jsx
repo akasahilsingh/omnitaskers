@@ -141,13 +141,13 @@ function Footer() {
           {/* Link sections */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h5 style={{
+              <h3 style={{
                 fontFamily: 'Outfit, sans-serif', fontWeight: 700,
                 fontSize: '0.75rem', letterSpacing: '0.10em', textTransform: 'uppercase',
                 color: '#14B8A6', marginBottom: '1.25rem',
               }}>
                 {section.title}
-              </h5>
+              </h3>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', listStyle: 'none', padding: 0, margin: 0 }}>
                 {section.links.map((link) => (
                   <li key={link.label}>
@@ -207,7 +207,7 @@ function Footer() {
                   <item.Icon size={16} style={{ color: '#14B8A6' }} />
                 </div>
                 <div>
-                  <p style={{ fontSize: '0.65rem', color: 'rgba(148,208,210,0.55)', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '4px' }}>
+                  <p style={{ fontSize: '0.65rem', color: 'rgba(148,208,210,0.80)', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '4px' }}>
                     {item.label}
                   </p>
                   {item.href ? (
@@ -236,13 +236,13 @@ function Footer() {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="container-inner" style={{ padding: '1.25rem 1.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-          <p style={{ fontSize: '0.78rem', color: 'rgba(186,230,253,0.35)', fontWeight: 500 }}>
+          <p style={{ fontSize: '0.78rem', color: 'rgba(186,230,253,0.60)', fontWeight: 500 }}>
             © {currentYear} Omnitaskers Solution Private Limited. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {['Privacy Policy', 'Terms of Service'].map((label) => (
               <a key={label} href="/" style={{
-                fontSize: '0.78rem', color: 'rgba(186,230,253,0.35)', fontWeight: 500,
+                fontSize: '0.78rem', color: 'rgba(186,230,253,0.60)', fontWeight: 500,
                 textDecoration: 'none', transition: 'color 0.2s ease',
               }}
                 onMouseEnter={e => e.target.style.color = 'white'}

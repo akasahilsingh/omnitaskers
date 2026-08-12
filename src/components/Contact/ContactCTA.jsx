@@ -168,7 +168,7 @@ export function ContactCTA() {
                 backdropFilter: 'blur(10px)',
               }}>
                 <p style={{
-                  fontSize: '0.65rem', color: 'rgba(148,208,210,0.7)',
+                  fontSize: '0.65rem', color: 'rgba(148,208,210,0.90)',
                   fontWeight: 700, letterSpacing: '0.08em',
                   textTransform: 'uppercase', marginBottom: '6px',
                 }}>
