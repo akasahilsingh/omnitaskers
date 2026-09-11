@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── Primary SEO ── -->
+  <title>Omnitaskers Solution – Integrated Operations &amp; Workforce Solutions</title>
+  <meta name="description" content="Omnitaskers Solution Private Limited provides integrated operations and workforce solutions including Warehouse Operations, Logistics Support, Manpower Solutions and Facility Management Services.">
+  <meta name="keywords" content="workforce solutions, warehouse operations, logistics support, manpower staffing, facility management, Omnitaskers">
+  <meta name="robots" content="index, follow">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title" content="Omnitaskers Solution – Reliable People. Efficient Operations. Better Business.">
+  <meta property="og:description" content="Integrated operations and workforce solutions for warehouse, logistics, manpower and facility management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.omnitaskers.in/">
+  <meta property="og:image" content="https://www.omnitaskers.in/apple-icon.png">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Omnitaskers Solution – Integrated Workforce &amp; Operations">
+  <meta name="twitter:description" content="Reliable workforce and operations solutions: Warehouse, Logistics, Manpower, Facility Management.">
+
+  <!-- ── Security meta tags (belt-and-suspenders — real headers set via vercel.json) ── -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <!-- ── Canonical ── -->
+  <link rel="canonical" href="https://www.omnitaskers.in/">
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
+
+  <!--
+    Google Fonts REMOVED — fonts are now self-hosted via @fontsource npm packages
+    (imported in src/main.jsx). This eliminates the 840ms render-blocking
+    external CDN request and the 731ms font file critical path.
+  -->
+
+  <!-- ── Critical inline styles ── -->
+  <style>
+    /* Critical: prevent Tailwind v4 border preflight bug */
+    *, *::before, *::after {
+      border-style: none;
+      border-width: 0;
+      outline: none;
+    }
+    /* Prevent layout shift before React mounts */
+    #root {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
