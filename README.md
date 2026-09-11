@@ -348,5 +348,5 @@ This is a private client project. For internal contributors:
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for Omaxe City residents · © 2025 OmniTaskers</sub>
+  <sub>Built with ❤️ for Omaxe City residents · © 2026 OmniTaskers</sub>
 </div>
