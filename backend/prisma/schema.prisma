@@ -1,0 +1,147 @@
+// OmniTaskers Phase 1 Prisma Schema
+// Database: PostgreSQL via Supabase
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+  MANAGER
+}
+
+enum ServiceCategory {
+  WAREHOUSE_OPERATIONS
+  LOGISTICS_SUPPLY_CHAIN
+  FACILITY_MANAGEMENT
+  MANPOWER_SOLUTIONS
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  QUOTED
+  CONVERTED
+  LOST
+}
+
+enum InquirySource {
+  WEBSITE_FORM
+  WHATSAPP
+  PHONE
+  REFERRAL
+  WALK_IN
+  OTHER
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String    @map("password_hash")
+  role         UserRole  @default(ADMIN)
+  phone        String?
+  isActive     Boolean   @default(true) @map("is_active")
+  lastLoginAt  DateTime? @map("last_login_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  assignedInquiries Inquiry[]     @relation("AssignedTo")
+  inquiryNotes      InquiryNote[]
+
+  @@map("users")
+}
+
+model Inquiry {
+  id              String          @id @default(cuid())
+  name            String
+  companyName     String?         @map("company_name")
+  email           String
+  phone           String
+  serviceCategory ServiceCategory @map("service_category")
+  message         String          @db.Text
+  status          InquiryStatus   @default(NEW)
+  source          InquirySource   @default(WEBSITE_FORM)
+  followUpAt      DateTime?       @map("follow_up_at")
+  convertedAt     DateTime?       @map("converted_at")
+  assignedToId    String?         @map("assigned_to_id")
+  assignedTo      User?           @relation("AssignedTo", fields: [assignedToId], references: [id], onDelete: SetNull)
+  notes           InquiryNote[]
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+
+  @@map("inquiries")
+}
+
+model InquiryNote {
+  id        String   @id @default(cuid())
+  content   String   @db.Text
+  inquiryId String   @map("inquiry_id")
+  inquiry   Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  authorId  String   @map("author_id")
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("inquiry_notes")
+}
+
+model Service {
+  id          String          @id @default(cuid())
+  name        String
+  category    ServiceCategory
+  description String          @db.Text
+  tagline     String?
+  subServices Json            @default("[]") @map("sub_services")
+  icon        String?
+  sortOrder   Int             @default(0) @map("sort_order")
+  isActive    Boolean         @default(true) @map("is_active")
+  createdAt   DateTime        @default(now()) @map("created_at")
+  updatedAt   DateTime        @updatedAt @map("updated_at")
+
+  @@map("services")
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  clientName  String   @map("client_name")
+  company     String
+  designation String
+  rating      Int      @default(5)
+  quote       String   @db.Text
+  initials    String
+  isPublished Boolean  @default(true) @map("is_published")
+  sortOrder   Int      @default(0) @map("sort_order")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("testimonials")
+}
+
+model Faq {
+  id          String   @id @default(cuid())
+  question    String
+  answer      String   @db.Text
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(true) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("faqs")
+}
+
+model CompanySetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("company_settings")
+}
